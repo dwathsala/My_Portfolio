@@ -22,7 +22,7 @@ const Hero = () => {
         {/* The Image Circle */}
         <div className="w-72 h-72 md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-[12px] border-white shadow-2xl relative z-10">
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" 
+            src="Me.png" 
             alt="Alex James" 
             className="w-full h-full object-cover"
           />
@@ -34,4 +34,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;m
+export default Hero;
