@@ -4,15 +4,15 @@ const Hero = () => {
   return (
     <section className="min-h-screen px-8 md:px-24 flex flex-col md:flex-row items-center justify-between py-20 bg-white">
       <div className="max-w-2xl">
-        <span className="text-s uppercase tracking-[0.3em] text-slate-500 font-semibold">
-          Web Developer
+        <span className="text-s uppercase tracking-[0.3em] text-slate-500 font-semibold bg-gray-200 px-2 py-1 rounded-full">
+          Available For Work
         </span>
         <h1 className="text-7xl md:text-8xl font-bold mt-4 mb-2 tracking-tighter text-slate-900 py-2">
           Dulari Dayananda
         </h1>
-        <p className="text-xl text-slate-600 mb-10">Software Engineering Undegraduate</p>
+        <p className="text-xl text-slate-700 mb-10">Intern Software Engineer</p>
         
-        <div className="space-y-3 text-lg text-slate-500 font-medium">
+        <div className="space-y-3 text-lg text-slate-600 font-medium">
           <p>+94 71 065 9360</p>
           <p>dulariwathsala824@mail.com</p>
         </div>
