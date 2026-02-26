@@ -1,16 +1,17 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
 
-
 function App() {
   return (
-
-    <div >
+    <div className="bg-white min-h-screen">
+      {/* The Header is global. It stays here forever. */}
       <Header />
+      
       <main className="relative">
+        
         <div className="pt-5"> 
           <Hero />
-
+          
         </div>
       </main>
     </div>
