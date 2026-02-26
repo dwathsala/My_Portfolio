@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen px-8 md:px-24 flex flex-col md:flex-row items-center justify-between py-20 bg-white">
+    <section className="h-screen px-8 md:px-24 flex flex-col md:flex-row items-center justify-between py-20 bg-white overflow-hidden">
       <div className="max-w-2xl">
         <span className="text-s uppercase tracking-[0.3em] text-slate-500 font-semibold bg-gray-200 px-2 py-1 rounded-full">
           Available For Work
