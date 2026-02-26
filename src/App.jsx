@@ -1,10 +1,19 @@
+import Header from './components/Header';
 import Hero from './components/Hero';
+
 
 function App() {
   return (
-    <main>
-      <Hero />
-    </main>
+
+    <div className="bg-[#000000] text-white">
+      <Header />
+      <main className="relative">
+        <div className="pt-10"> 
+          <Hero />
+
+        </div>
+      </main>
+    </div>
   );
 }
 
