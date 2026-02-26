@@ -8,7 +8,7 @@ function App() {
     <div >
       <Header />
       <main className="relative">
-        <div className=""> 
+        <div className="pt-5"> 
           <Hero />
 
         </div>
