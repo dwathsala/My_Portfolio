@@ -5,10 +5,10 @@ import Hero from './components/Hero';
 function App() {
   return (
 
-    <div className="bg-[#000000] text-white">
+    <div >
       <Header />
       <main className="relative">
-        <div className="pt-10"> 
+        <div className="pt-20"> 
           <Hero />
 
         </div>
