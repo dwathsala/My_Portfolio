@@ -3,7 +3,7 @@ import Hero from './components/Hero';
 function App() {
   return (
 
-    <div >
+    <div className="bg-white min-h-screen">
       
       <main className="relative">
         <div className="pt-5"> 
