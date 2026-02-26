@@ -13,8 +13,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black text-white shadow-md">
-      <nav className="max-w-[1440px] mx-auto px-8 md:px-24 h-16 flex justify-between items-center bg-black">
+    <header className="fixed top-0 left-0 w-full z-50 bg-slate-900 text-white shadow-md">
+      <nav className="max-w-[1440px] mx-auto px-8 md:px-24 h-16 flex justify-between items-center bg-slate-900">
         {/* Logo Section */}
         <div className="text-xl font-bold tracking-tight z-[60]">
           Dulari Dayananda
