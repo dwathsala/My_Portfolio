@@ -1,4 +1,5 @@
 import React from 'react';
+import { Phone, Mail } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -12,9 +13,16 @@ const Hero = () => {
         </h1>
         <p className="text-xl text-slate-700 mb-10">Intern Software Engineer</p>
         
-        <div className="space-y-3 text-lg text-slate-600 font-medium">
-          <p>+94 71 065 9360</p>
-          <p>dulariwathsala824@mail.com</p>
+        <div className="space-y-4 text-lg text-slate-600 font-medium">
+          <div className="flex items-center gap-3">
+            <Phone size={20} className="text-slate-400" />
+            <p>+94 71 065 9360</p>
+          </div>
+          
+          <div className="flex items-center gap-3">
+            <Mail size={20} className="text-slate-400" />
+            <p>dulariwathsala824@mail.com</p>
+          </div>
         </div>
       </div>
       
