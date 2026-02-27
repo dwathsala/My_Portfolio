@@ -11,6 +11,7 @@ function App() {
 
       <main className="relative">
         <Hero />
+        <About />
 
       </main>
 
