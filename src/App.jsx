@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import About from './components/about';
 import Skills from './components/Skills';
 
+
 function App() {
   return (
     <div className="bg-white min-h-screen">
@@ -12,7 +13,6 @@ function App() {
       <main className="relative">
         <Hero />
         <About />
-        <Skills />
       </main>
 
     </div>

@@ -3,7 +3,7 @@ import { Phone, Mail, Download } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen px-6 sm:px-12 md:px-24 flex flex-col md:flex-row items-center justify-center py-16 md:py-0 bg-white overflow-hidden gap-12">
+    <section id="home" className="min-h-screen px-6 sm:px-12 md:px-24 flex flex-col md:flex-row items-center justify-center py-16 md:py-0 bg-white overflow-hidden gap-12">
       
       {/* 1. Mobile Status Badge - Refined padding and font */}
       <div className="md:hidden order-1 mt-8">
@@ -56,7 +56,6 @@ const Hero = () => {
         {/* Action Button - Enhanced shadow and sizing */}
         <div className="w-full flex justify-center md:justify-start">
           <a 
-            href="/path-to-your-cv.pdf" 
             download 
             className="group flex items-center gap-3 bg-slate-900 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-600 transition-all duration-300 shadow-2xl hover:shadow-blue-200 active:scale-95"
           >
