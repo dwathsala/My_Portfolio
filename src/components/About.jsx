@@ -130,7 +130,7 @@ const About = () => {
                   💻
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 text-lg">15+ Projects</h4>
+                  <h4 className="font-bold text-slate-800 text-lg">3+ Projects</h4>
                   <p className="text-sm text-slate-500">Completed successfully</p>
                 </div>
               </div>
@@ -140,7 +140,7 @@ const About = () => {
                   ⭐
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 text-lg">20+ Repositories</h4>
+                  <h4 className="font-bold text-slate-800 text-lg">10+ Repositories</h4>
                   <p className="text-sm text-slate-500">Public GitHub projects</p>
                 </div>
               </div>
@@ -150,7 +150,7 @@ const About = () => {
                   🎯
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 text-lg">2+ Years Coding</h4>
+                  <h4 className="font-bold text-slate-800 text-lg">2+ Years Learning</h4>
                   <p className="text-sm text-slate-500">Continuous learning journey</p>
                 </div>
               </div>
