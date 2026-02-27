@@ -22,11 +22,11 @@ const About = () => {
       <div className="max-w-7xl mx-auto">
         
         {/* Header Section */}
-        <div className="mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-3 ">
+        <div className="mb-10 text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-3">
             About <span className="text-blue-800">Me</span>
           </h2>
-          <div className="w-20 h-1.5 bg-blue-800 rounded-full"></div>
+          <div className="w-20 h-1.5 bg-blue-800 rounded-full mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
