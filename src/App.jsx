@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
+import About from './components/about';
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
       <main className="relative">
         <Hero />
-        
+
       </main>
 
     </div>
