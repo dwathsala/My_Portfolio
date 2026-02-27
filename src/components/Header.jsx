@@ -5,11 +5,11 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'About', href: '#' },
-    { name: 'Skills', href: '#' },
-    { name: 'Projects', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -23,8 +23,11 @@ const Header = () => {
         {/* Desktop Navigation Links (Hidden on Mobile) */}
         <ul className="hidden md:flex gap-8 text-lg font-medium">
           {navLinks.map((link) => (
-            <li key={link.name} className="hover:text-gray-400 cursor-pointer transition-colors">
-              {link.name}
+            <li key={link.name} >
+              <a 
+                href={link.href} className="hover:text-gray-400 cursor-pointer transition-colors">
+                {link.name}
+              </a>
             </li>
           ))}
         </ul>
@@ -42,12 +45,14 @@ const Header = () => {
         >
           <ul className="flex flex-col gap-8 text-2xl font-semibold text-center">
             {navLinks.map((link) => (
-              <li 
-                key={link.name} 
+              <li key={link.name} >
+              <a
+                href={link.href}
                 onClick={() => setIsOpen(false)} // Close menu when a link is clicked
                 className="hover:text-gray-400 cursor-pointer transition-colors"
               >
                 {link.name}
+              </a>
               </li>
             ))}
           </ul>
