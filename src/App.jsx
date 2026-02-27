@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/about';
 
+
 function App() {
   return (
     <div className="bg-white min-h-screen">
@@ -10,7 +11,7 @@ function App() {
 
       <main className="relative">
         <Hero />
-        <About />
+
       </main>
 
     </div>
