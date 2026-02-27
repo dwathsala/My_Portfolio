@@ -13,6 +13,7 @@ function App() {
       <main className="relative">
         <Hero />
         <About />
+        <Skills />
       </main>
 
     </div>
