@@ -3,7 +3,7 @@ import { Phone, Mail, Download } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen px-6 sm:px-12 md:px-24 flex flex-col md:flex-row items-center justify-center py-16 md:py-0 bg-white overflow-hidden gap-12">
+    <section id="home" className="min-h-screen px-6 sm:px-12 md:px-24 flex flex-col md:flex-row items-center justify-center py-16 md:py-0 bg-white overflow-hidden gap-12">
       
       {/* 1. Mobile Status Badge - Refined padding and font */}
       <div className="md:hidden order-1 mt-8">
