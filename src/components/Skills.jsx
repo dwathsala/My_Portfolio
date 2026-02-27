@@ -28,7 +28,7 @@ const WhatIDo = () => {
 
   return (
     // 2. Section container using slate-900 background for a premium contrast look
-    <section id="services" className="py-24 px-6 md:px-16 lg:px-32 xl:px-48 bg-slate-900 text-white scroll-mt-20">
+    <section id="skills" className="py-10 px-6 md:px-16 lg:px-32 xl:px-48 bg-slate-900 text-white scroll-mt-20">
       <div className="max-w-[1400px] mx-auto">
         
         {/* 3. Section Title - Uses the bold style from your portfolio reference */}
@@ -49,11 +49,11 @@ const WhatIDo = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="bg-slate-800/60 p-10 rounded-[2rem] border border-slate-700 shadow-xl hover:shadow-2xl hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-2 group"
+              className="bg-slate-800/60 p-4 rounded-[2rem] border border-slate-700 shadow-xl hover:shadow-2xl hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-2 group"
             >
               {/* Icon Container with the distinctive corner element seen in references */}
               <div className="relative mb-8 flex justify-center w-fit mx-auto">
-                <div className="p-6 bg-slate-700/50 rounded-2xl relative z-10 border border-slate-600 transition-colors group-hover:bg-blue-900/30 group-hover:border-blue-700">
+                <div className="p-5 bg-slate-700/50 rounded-2xl relative z-10 border border-slate-600 transition-colors group-hover:bg-blue-900/30 group-hover:border-blue-700">
                   {service.icon}
                 </div>
                 {/* 6. Decorative corner element */}
