@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
+import About from './components/about';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
 
       <main className="relative">
         <Hero />
+        <About />
       </main>
 
     </div>
