@@ -7,7 +7,7 @@ const WhatIDo = () => {
     {
       icon: <BrainCircuit size={40} className="text-blue-600" />,
       title: "MERN Stack Development",
-      description: "Full-stack development expertise using MongoDB, Express.js, React.js, and Node.js to build dynamic web applications."
+      description: "Building full-stack web applications with the MERN stack, focusing on clean structure and practical solutions."
     },
     {
       icon: <Layout size={40} className="text-blue-600" />,
