@@ -9,7 +9,6 @@ function App() {
       
       <main className="relative">
         
-        <div className="pt-10"> 
           <Hero />
           
         </div>
