@@ -6,13 +6,11 @@ function App() {
     <div className="bg-white min-h-screen">
       {/* The Header is global. It stays here forever. */}
       <Header />
-      
+
       <main className="relative">
-        
-          <Hero />
-          
-        </div>
+        <Hero />
       </main>
+
     </div>
   );
 }
