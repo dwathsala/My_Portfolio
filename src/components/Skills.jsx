@@ -7,7 +7,7 @@ const WhatIDo = () => {
     {
       icon: <BrainCircuit size={40} className="text-blue-600" />,
       title: "MERN Stack Development",
-      description: "Full-stack development expertise using MongoDB, Express.js, React.js, and Node.js to build dynamic web applications."
+      description: "Building full-stack web applications with the MERN stack, focusing on clean structure and practical solutions."
     },
     {
       icon: <Layout size={40} className="text-blue-600" />,
@@ -28,11 +28,11 @@ const WhatIDo = () => {
 
   return (
     // 2. Section container using slate-900 background for a premium contrast look
-    <section id="skills" className="py-10 px-6 md:px-16 lg:px-32 xl:px-48 bg-slate-900 text-white scroll-mt-20">
+    <section id="skills" className="py-10 px-6 md:px-16 lg:px-32 xl:px-48 bg-slate-900 text-white scroll-mt-16">
       <div className="max-w-[1400px] mx-auto">
         
         {/* 3. Section Title - Uses the bold style from your portfolio reference */}
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-10 md:mb-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-3 text-white leading-tight">
             What <span className="text-blue-600">I Do</span>
           </h2>
@@ -70,6 +70,7 @@ const WhatIDo = () => {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
