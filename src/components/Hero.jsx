@@ -56,7 +56,7 @@ const Hero = () => {
         {/* Action Button - Enhanced shadow and sizing */}
         <div className="w-full flex justify-center md:justify-start">
           <a 
-            href="/Dulari-CV.pdf" 
+            href="/Dulari_Dayananda-CV.pdf" 
             download 
             className="group flex items-center gap-3 bg-slate-900 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-600 transition-all duration-300 shadow-2xl hover:shadow-blue-200 active:scale-95"
           >
