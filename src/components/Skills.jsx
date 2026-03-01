@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Server, Database, BrainCircuit } from 'lucide-react';
+import { Layout, Server, Database, BrainCircuit, CheckCircle} from 'lucide-react';
 
 const WhatIDo = () => {
   // 1. Defining skill categories with descriptions and icons from lucide-react
@@ -22,13 +22,18 @@ const WhatIDo = () => {
     {
       icon: <Database size={40} className="text-blue-600" />,
       title: "Database Management",
-      description: "Designing, implementing, and maintaining efficient SQL and NoSQL database solutions for optimal data performance."
+      description: "Managing SQL and NoSQL databases to ensure efficient data storage, retrieval, and performance."
+    },
+    {
+      icon: <CheckCircle size={40} className="text-blue-600" />,
+      title: "Testing & QA",
+      description: "Ensuring application reliability through unit testing, debugging, and quality assurance practices for stable and maintainable software."
     }
   ];
 
   return (
     // 2. Section container using slate-900 background for a premium contrast look
-    <section id="skills" className="py-10 px-6 md:px-16 lg:px-32 xl:px-48 bg-slate-900 text-white scroll-mt-16">
+    <section id="skills" className="py-10 px-6 md:px-16 lg:px-30 bg-slate-900 text-white scroll-mt-16">
       <div className="max-w-[1400px] mx-auto">
         
         {/* 3. Section Title - Uses the bold style from your portfolio reference */}
@@ -42,8 +47,8 @@ const WhatIDo = () => {
           </p>
         </div>
 
-        {/* 4. The Grid Layout - Controls responsive behavior (1 col mobile, 2 tablet, 4 desktop) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+        {/* 4. The Grid Layout - Controls responsive behavior (1 col mobile, 3 tablet, 5 desktop) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-6">
           
           {/* 5. Mapping over services to generate attractive cards */}
           {services.map((service, index) => (
