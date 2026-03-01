@@ -33,7 +33,7 @@ const WhatIDo = () => {
 
   return (
     // 2. Section container using slate-900 background for a premium contrast look
-    <section id="skills" className="py-10 px-6 md:px-16 lg:px-30 bg-slate-900 text-white scroll-mt-16">
+    <section id="skills" className="py-12 px-6 md:px-16 lg:px-30 bg-slate-900 text-white scroll-mt-16">
       <div className="max-w-[1400px] mx-auto">
         
         {/* 3. Section Title - Uses the bold style from your portfolio reference */}

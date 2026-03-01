@@ -18,7 +18,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 px-6 md:px-16 lg:px-32 bg-slate-200 scroll-mt-16">
+    <section id="about" className="py-12 px-6 md:px-16 lg:px-30 bg-slate-200 scroll-mt-16">
       <div className="max-w-7xl mx-auto">
         
         {/* Header Section */}
