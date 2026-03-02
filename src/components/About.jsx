@@ -49,14 +49,18 @@ const About = () => {
 
               <div className="flex gap-4 mt-10">
                 {/* Contact Me Button */}
-                <button className="px-6 py-2  bg-slate-900 text-white font-semibold rounded-full hover:bg-blue-900 transition">
-                  Contact Me
-                </button>
+                <a href='#contact'>
+                  <button className="px-6 py-2  bg-slate-900 text-white font-semibold rounded-full hover:bg-blue-900 transition">
+                    Contact Me
+                  </button>
+                </a>
 
                 {/* View Projects Button */}
-                <button className="px-6 py-2 border border-slate-900 text-slate-900 font-semibold rounded-full hover:bg-blue-200 transition">
-                  My Projects
-                </button>
+                <a href='#projects'>
+                  <button className="px-6 py-2 border border-slate-900 text-slate-900 font-semibold rounded-full hover:bg-blue-200 transition">
+                    My Projects
+                  </button>
+                </a>
               </div>
               
             </div>
@@ -65,7 +69,7 @@ const About = () => {
             <div className="bg-slate-900 p-8 rounded-3xl text-white shadow-xl ">
               <h3 className="text-xl font-bold mb-4">Let's Connect</h3>
               <p className="text-slate-300 mb-6">I am currently open to internship opportunities and collaborations.</p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-nowrap gap-4">
                 <a href="https://github.com/dwathsala" target='_blank' rel='noopener noreferrer' className="p-3 bg-white/10 rounded-xl hover:bg-blue-600 transition-colors">
                   <Github size={20} />
                 </a>
@@ -75,9 +79,11 @@ const About = () => {
                 <a href="mailto:dulariwathsala824@mail.com?subject=Portfolio Contact&body=Hello Dulari,%0A%0AI would like to connect with you." target='_blank' rel='noopener noreferrer' className="p-3 bg-white/10 rounded-xl hover:bg-blue-600 transition-colors">
                   <Mail size={20} />
                 </a>
-                <button className="flex items-center gap-2 px-6 py-3 bg-blue-600 rounded-xl font-bold hover:bg-blue-700 transition-all ml-auto">
-                  Hire Me <ExternalLink size={16} />
+                <a href='#contact' className="ml-auto">
+                  <button className="flex items-center gap-2 px-6 py-3  bg-blue-600 rounded-xl font-bold hover:bg-blue-700 transition-all ml-auto">
+                    Hire Me <ExternalLink size={16} />
                 </button>
+                </a>
               </div>
             </div>
 
@@ -130,7 +136,7 @@ const About = () => {
                   💻
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 text-lg">3+ Projects</h4>
+                  <h4 className="font-semibold text-slate-800">3+ Projects</h4>
                   <p className="text-sm text-slate-500">Completed successfully</p>
                 </div>
               </div>
@@ -140,7 +146,7 @@ const About = () => {
                   ⭐
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 text-lg">10+ Repositories</h4>
+                  <h4 className="font-semibold text-slate-800">10+ Repositories</h4>
                   <p className="text-sm text-slate-500">Public GitHub projects</p>
                 </div>
               </div>
@@ -150,7 +156,7 @@ const About = () => {
                   🎯
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 text-lg">2+ Years Learning</h4>
+                  <h4 className="font-semibold text-slate-800">2+ Years Learning</h4>
                   <p className="text-sm text-slate-500">Continuous learning journey</p>
                 </div>
               </div>
@@ -160,7 +166,7 @@ const About = () => {
                   🤝
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 text-lg">IEEE Volunteer</h4>
+                  <h4 className="font-semibold text-slate-800">IEEE Volunteer</h4>
                   <p className="text-sm text-slate-500">Active tech community member</p>
                 </div>
               </div>
@@ -176,46 +182,69 @@ const About = () => {
               
             <div className="space-y-6">
               
-              <div className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+              <a 
+                href="https://www.linkedin.com/posts/dulari-dayananda_leadershipjourney-ieeestudentbranch-innovation-activity-7278007032903880704-aIqY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3p4ucBwWjt1DRld8Hu5Puwqx35JbPhgd4" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
+              >
                 <div className="w-12 h-12 flex items-center justify-center bg-purple-100 text-purple-700 rounded-2xl text-xl">
                   🤝
                 </div>
-                <div>
+                <div className="flex-1">
                   <h4 className="font-semibold text-slate-800">Volunteering (IEEE)</h4>
-                  <p className="text-sm text-slate-500">Contributing to tech community growth</p>
+                  <p className="text-sm text-slate-500">Served as former Vice Secretary at IEEE Student Branch of SUSL</p>
                 </div>
-              </div>
-              
-              <div className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+                <ExternalLink size={20} className="text-slate-400 hover:text-blue-600 transition-colors" />
+              </a>
+
+              <a 
+                href="https://www.linkedin.com/posts/dulari-dayananda_insl2025-innovationnationsrilanka-ieee-activity-7411653346681511936-2eIs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3p4ucBwWjt1DRld8Hu5Puwqx35JbPhgd4" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
+              >
                 <div className="w-12 h-12 flex items-center justify-center bg-green-100 text-green-700 rounded-2xl text-xl">
                   🚀
                 </div>
-                <div>
+                <div className="flex-1">
                   <h4 className="font-semibold text-slate-800">Hackathons</h4>
-                  <p className="text-sm text-slate-500">Building fast & creative solutions</p>
+                  <p className="text-sm text-slate-500">1st Runner-Up at INSL – Provincial Competition with Team Hackstrom.</p>
                 </div>
-              </div>
-              
-              <div className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+                <ExternalLink size={20} className="text-slate-400 hover:text-blue-600 transition-colors" />
+              </a>
+
+              <a 
+                href="https://medium.com/@dulariwathsala824" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
+              >
                 <div className="w-12 h-12 flex items-center justify-center bg-orange-100 text-orange-700 rounded-2xl text-xl">
                   📚
                 </div>
-                <div>
-                  <h4 className="font-semibold text-slate-800">Reading Tech Blogs</h4>
-                  <p className="text-sm text-slate-500">Staying updated with trends</p>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-slate-800">Reading and Writing Tech Blogs</h4>
+                  <p className="text-sm text-slate-500">Exploring and sharing tech trends through blogs.</p>
                 </div>
-              </div>
-              
-              <div className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+                <ExternalLink size={20} className="text-slate-400 hover:text-blue-600 transition-colors" />
+              </a>
+
+              <a 
+                href="https://www.linkedin.com/posts/dulari-dayananda_figma-uidesign-mobileappdesign-activity-7385689018589462528-iBs6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3p4ucBwWjt1DRld8Hu5Puwqx35JbPhgd4" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
+              >
                 <div className="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-700 rounded-2xl text-xl">
                   🎨
                 </div>
-                <div>
+                <div className="flex-1">
                   <h4 className="font-semibold text-slate-800">UI/UX Design</h4>
-                  <p className="text-sm text-slate-500">Designing intuitive interfaces</p>
+                  <p className="text-sm text-slate-500">Learning to design intuitive and user-friendly interfaces.</p>
                 </div>
-              </div>
-              
+                <ExternalLink size={20} className="text-slate-400 hover:text-blue-600 transition-colors" />
+              </a>              
             </div>
           </div>
               
