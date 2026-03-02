@@ -11,7 +11,6 @@ const ContactAndFooter = () => {
 
   return (
     <div className="relative font-sans">
-      {/* --- CONTACT SECTION (Dark Theme) --- */}
       <section id="contact" className="py-12 px-6 md:px-16 lg:px-32 bg-slate-900 text-white scroll-mt-16 relative overflow-hidden">
         {/* Subtle Background Glows */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px] -z-0"></div>
@@ -94,7 +93,7 @@ const ContactAndFooter = () => {
         </div>
       </section>
 
-      {/* --- FOOTER SECTION (Light Theme) --- */}
+      {/*FOOTER SECTION*/}
       <footer className="bg-white pt-10 pb-12 px-6 md:px-16 lg:px-32 border-t border-slate-100">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
@@ -119,7 +118,7 @@ const ContactAndFooter = () => {
             <div className="md:col-span-3">
               <h4 className="text-lg font-bold underline uppercase tracking-[0.2em] text-slate-900 mb-6">Navigation</h4>
               <ul className="space-y-3">
-                {['Home', 'About', 'Projects', 'Contact'].map((link) => (
+                {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((link) => (
                   <li key={link}>
                     <a href={`#${link.toLowerCase()}`} className="text-slate-700 hover:text-blue-600 transition-colors font-bold text-lg">
                       {link}
