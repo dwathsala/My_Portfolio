@@ -3,7 +3,7 @@ import { Phone, Mail, Download } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen px-6 sm:px-12 md:px-24 flex flex-col md:flex-row items-center justify-center py-16 md:py-0 bg-white overflow-hidden gap-12">
+    <section id="home" className="min-h-screen px-6 sm:px-12 md:px-24 flex flex-col md:flex-row items-center justify-center py-16 md:py-0 bg-white overflow-hidden gap-12 ">
       
       {/* 1. Mobile Status Badge - Refined padding and font */}
       <div className="md:hidden order-1 mt-8">
@@ -27,9 +27,13 @@ const Hero = () => {
 
       {/* 3. Text Content - Improved hierarchy and alignment */}
       <div className="max-w-xl text-center md:text-left order-3 md:order-1 flex flex-col items-center md:items-start">
-        <span className="hidden md:inline-block text-xs uppercase tracking-[0.3em] text-slate-500 font-bold bg-slate-100 border border-slate-200 px-4 py-1.5 rounded-full mb-6">
+        <span className="hidden md:inline-block text-xs uppercase tracking-[0.3em] text-slate-500 font-bold bg-slate-100 border border-slate-200 px-4 py-1.5 rounded-full mb-6 mt-8">
           Available For Work
         </span>
+
+        <p className="text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tighter text-slate-700 leading-[0.9] lg:leading-[1.1]">
+          Hi, I'm
+        </p>
         
         <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black mb-4 tracking-tighter text-slate-900 leading-[0.9] lg:leading-[1.1]">
           Dulari <br className="hidden md:block" /> Dayananda
@@ -56,7 +60,8 @@ const Hero = () => {
         {/* Action Button - Enhanced shadow and sizing */}
         <div className="w-full flex justify-center md:justify-start">
           <a 
-            download 
+            href="/Dulari_Dayananda-CV.pdf"
+            download = "Dulari_Dayananda-CV.pdf"
             className="group flex items-center gap-3 bg-slate-900 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-600 transition-all duration-300 shadow-2xl hover:shadow-blue-200 active:scale-95"
           >
             <Download size={22} className="group-hover:animate-bounce" />
