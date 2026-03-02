@@ -38,7 +38,7 @@ const WhatIDo = () => {
         
         {/* 3. Section Title - Uses the bold style from your portfolio reference */}
         <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-3 text-white leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 text-white leading-tight">
             What <span className="text-blue-600">I Do</span>
           </h2>
           <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
