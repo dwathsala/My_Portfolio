@@ -4,7 +4,7 @@ import { Github, ExternalLink, Code2 } from 'lucide-react';
 const Projects = () => {
   const projectList = [
     {
-      category: "Group Project",
+      category: "Group Project - Completed",
       title: "EventBuddy – Smart Event Planning & Vendor Marketplace",
       description: "EventBuddy is a MERN-based event management platform that allows users to create, manage, and book events, enhanced with an AI assistant for smarter user support.",
       image: "EventBuddy.png", 
@@ -13,7 +13,7 @@ const Projects = () => {
       githubLink: "https://github.com/Hasmoonn/EventBuddy"
     },
     {
-      category: "Group Project",
+      category: "Group Project - Completed",
       title: "InternQuest – Internship & Job Matcher System ",
       description: "A sophisticated e-commerce solution focused on a seamless user experience and robust product management.",
       image: "Web.jpeg", 
@@ -22,7 +22,7 @@ const Projects = () => {
       githubLink: "https://github.com/kaveenskn/InternQuest-web-Group2"
     },
     {
-      category: "Individual Project",
+      category: "Individual Project - Ongoing",
       title: "Dula Cosmetics – E-commerce Website",
       description: "Building a secure full-stack e-commerce app with JWT auth, Google Login, and password reset using React, Node.js–Express, MongoDB, and Supabase for images and analytics.",
       image: "DulaCosmetics.png", 
@@ -31,7 +31,7 @@ const Projects = () => {
       githubLink: "https://github.com/dwathsala/cbc-frontend"
     },
         {
-      category: "Individual Project",
+      category: "Individual Project - Completed",
       title: "Coffe-Website",
       description: "A responsive coffee shop website UI built using HTML, CSS, and JavaScript with a modern and user-friendly design.",
       image: "Coffee-Web.png", 
