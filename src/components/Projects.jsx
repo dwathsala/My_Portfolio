@@ -8,7 +8,7 @@ const Projects = () => {
       title: "EventBuddy – Smart Event Planning & Vendor Marketplace",
       description: "EventBuddy is a MERN-based event management platform that allows users to create, manage, and book events, enhanced with an AI assistant for smarter user support.",
       image: "EventBuddy.png", 
-      techStack: ["React", "Node.js",  "Express","MongoDB"],
+      techStack: ["React.js with Tailwind CSS", "Node.js",  "Express","MongoDB"],
       liveLink: "#",
       githubLink: "https://github.com/Hasmoonn/EventBuddy"
     },
@@ -17,7 +17,7 @@ const Projects = () => {
       title: "InternQuest – Internship & Job Matcher System ",
       description: "A sophisticated e-commerce solution focused on a seamless user experience and robust product management.",
       image: "Web.jpeg", 
-      techStack: ["React.js with Tailwind CSS", "Node.js",  "Express","MongoDB"],
+      techStack: ["React.js", "Node.js",  "Express","MongoDB"],
       liveLink: "#",
       githubLink: "https://github.com/kaveenskn/InternQuest-web-Group2"
     },
