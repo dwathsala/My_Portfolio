@@ -30,7 +30,16 @@ const Projects = () => {
       liveLink: "https://cbc-frontend-three.vercel.app/",
       githubLink: "https://github.com/dwathsala/cbc-frontend"
     },
-        {
+    {
+      category: "Individual Project - Completed",
+      title: "Client-Server Chat Application ",
+      description: "Real-time multi-client chat app using Python sockets and Tkinter, featuring GUI messaging, timestamps, and saved chat history.",
+      image: "Client-Server.png", 
+      techStack: ["Python", "Sockets", "Tkinter", "Threading"],
+      liveLink: "",
+      githubLink: "https://github.com/dwathsala/Client-Server-Architecture"
+    },
+    {
       category: "Individual Project - Completed",
       title: "Coffe-Website",
       description: "A responsive coffee shop website UI built using HTML, CSS, and JavaScript with a modern and user-friendly design.",
@@ -114,7 +123,7 @@ const Projects = () => {
                       </a>
                       
                       <a 
-                        href={project.liveLink} target='_blank' rel='noopener noreferrer'
+                        href={project.liveLink}
                         className="flex-1 flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-slate-900 to-slate-600 text-white font-bold rounded-full hover:shadow-lg hover:shadow-blue-200 transition-all active:scale-95 text-center"
                       >
                         <ExternalLink size={20} /> Live Demo
