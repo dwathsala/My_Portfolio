@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ExternalLink, Github, Linkedin, Mail } from 'lucide-react';
 
 const About = () => {
+  // Local observer for the About section
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const elements = entry.target.querySelectorAll('.reveal');
+          elements.forEach(el => el.classList.add('active'));
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const section = document.querySelector('#about');
+    if (section) observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
   const skills = [
     { name: "JavaScript", color: "bg-yellow-50 text-yellow-700 border-yellow-200" },
     { name: "React.js", color: "bg-blue-50 text-blue-700 border-blue-200" },
@@ -18,11 +35,11 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-12 px-6 md:px-16 lg:px-30 bg-slate-200 scroll-mt-16">
+    <section id="about" className="py-12 px-6 md:px-16 lg:px-30 bg-slate-200 scroll-mt-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
-        {/* Header Section */}
-        <div className="mb-10 text-center">
+        {/* Header Section - Scale In */}
+        <div className="mb-10 text-center reveal reveal-scale">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-3">
             About <span className="text-blue-800">Me</span>
           </h2>
@@ -31,8 +48,8 @@ const About = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           
-          {/* Left Side: About Paragraph & Contact Component */}
-          <div className="flex flex-col gap-8">
+          {/* Left Side: About Paragraph & Contact Component - Slide from Left */}
+          <div className="flex flex-col gap-8 reveal reveal-left">
             <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100 flex-grow">
               <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-blue-800"></span>
@@ -48,25 +65,21 @@ const About = () => {
               </div>
 
               <div className="flex gap-4 mt-10">
-                {/* Contact Me Button */}
                 <a href='#contact'>
-                  <button className="px-6 py-2  bg-slate-900 text-white font-semibold rounded-full hover:bg-blue-900 transition">
+                  <button className="px-6 py-2 bg-slate-900 text-white font-semibold rounded-full hover:bg-blue-900 transition">
                     Contact Me
                   </button>
                 </a>
-
-                {/* View Projects Button */}
                 <a href='#projects'>
                   <button className="px-6 py-2 border border-slate-900 text-slate-900 font-semibold rounded-full hover:bg-blue-200 transition">
                     My Projects
                   </button>
                 </a>
               </div>
-              
             </div>
 
-               {/* "Connect with Me" Professional Component */}
-            <div className="bg-slate-900 p-8 rounded-3xl text-white shadow-xl ">
+            {/* Connect Card */}
+            <div className="bg-slate-900 p-8 rounded-3xl text-white shadow-xl">
               <h3 className="text-xl font-bold mb-4">Let's Connect</h3>
               <p className="text-slate-300 mb-6">I am currently open to internship opportunities and collaborations.</p>
               <div className="flex flex-nowrap gap-4">
@@ -76,21 +89,19 @@ const About = () => {
                 <a href="https://www.linkedin.com/in/dulari-dayananda/" target='_blank' rel='noopener noreferrer' className="p-3 bg-white/10 rounded-xl hover:bg-blue-600 transition-colors">
                   <Linkedin size={20} />
                 </a>
-                <a href="mailto:dulariwathsala824@mail.com?subject=Portfolio Contact&body=Hello Dulari,%0A%0AI would like to connect with you." target='_blank' rel='noopener noreferrer' className="p-3 bg-white/10 rounded-xl hover:bg-blue-600 transition-colors">
+                <a href="mailto:dulariwathsala824@mail.com" target='_blank' rel='noopener noreferrer' className="p-3 bg-white/10 rounded-xl hover:bg-blue-600 transition-colors">
                   <Mail size={20} />
                 </a>
                 <a href='#contact' className="ml-auto">
-                  <button className="flex items-center gap-2 px-6 py-3  bg-blue-600 rounded-xl font-bold hover:bg-blue-700 transition-all ml-auto">
+                  <button className="flex items-center gap-2 px-6 py-3 bg-blue-600 rounded-xl font-bold hover:bg-blue-700 transition-all">
                     Hire Me <ExternalLink size={16} />
-                </button>
+                  </button>
                 </a>
               </div>
             </div>
-
-            
           </div>
 
-          {/* Right Side: Skills Grid */}
+          {/* Right Side: Skills Grid - Staggered Up */}
           <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100">
             <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-blue-800"></span>
@@ -100,7 +111,8 @@ const About = () => {
               {skills.map((skill, index) => (
                 <div 
                   key={index} 
-                  className={`p-5 rounded-2xl border ${skill.color} flex items-center justify-between transition-all hover:shadow-md group`}
+                  className={`reveal reveal-up p-5 rounded-2xl border ${skill.color} flex items-center justify-between transition-all hover:shadow-md group`}
+                  style={{ transitionDelay: `${index * 50}ms` }}
                 >
                   <span className="font-bold">{skill.name}</span>
                   <div className="w-2 h-2 rounded-full bg-current opacity-40 group-hover:opacity-100 transition-opacity"></div>
@@ -108,8 +120,7 @@ const About = () => {
               ))}
             </div>
             
-            {/* Added Value: Professional Learning Note */}
-            <div className="mt-5 p-4 bg-blue-100 rounded-2xl border border-blue-200 flex items-center justify-center">
+            <div className="reveal reveal-up mt-5 p-4 bg-blue-100 rounded-2xl border border-blue-200 flex items-center justify-center" style={{ transitionDelay: '600ms' }}>
               <p className="text-sm text-blue-800 font-medium">
                 Currently expanding my knowledge in Full-Stack Development and Python.
               </p>
@@ -122,135 +133,52 @@ const About = () => {
       {/* Interests + Fun Stats Section */}
       <div className="mt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              
-          {/* LEFT SIDE — FUN STATS */}
-          <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center justify-center">
-              Fun Stats
-            </h3>
-              
+          
+          {/* STATS - Staggered Up */}
+          <div className="reveal reveal-up">
+            <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center justify-center">Fun Stats</h3>
             <div className="space-y-6">
-              
-              <div className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
-                <div className="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-700 rounded-2xl text-xl">
-                  💻
+              {[
+                { emoji: "💻", val: "3+ Projects", sub: "Completed successfully", col: "bg-blue-100 text-blue-700" },
+                { emoji: "⭐", val: "10+ Repositories", sub: "Public GitHub projects", col: "bg-purple-100 text-purple-700" },
+                { emoji: "🎯", val: "2+ Years Learning", sub: "Continuous learning journey", col: "bg-green-100 text-green-700" },
+                { emoji: "🤝", val: "IEEE Volunteer", sub: "Active tech community member", col: "bg-orange-100 text-orange-700" }
+              ].map((stat, i) => (
+                <div key={i} className="reveal reveal-up flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all" style={{ transitionDelay: `${i * 100}ms` }}>
+                  <div className={`w-12 h-12 flex items-center justify-center rounded-2xl text-xl ${stat.col}`}>{stat.emoji}</div>
+                  <div>
+                    <h4 className="font-semibold text-slate-800">{stat.val}</h4>
+                    <p className="text-sm text-slate-500">{stat.sub}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-slate-800">3+ Projects</h4>
-                  <p className="text-sm text-slate-500">Completed successfully</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
-                <div className="w-12 h-12 flex items-center justify-center bg-purple-100 text-purple-700 rounded-2xl text-xl">
-                  ⭐
-                </div>
-                <div>
-                  <h4 className="font-semibold text-slate-800">10+ Repositories</h4>
-                  <p className="text-sm text-slate-500">Public GitHub projects</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
-                <div className="w-12 h-12 flex items-center justify-center bg-green-100 text-green-700 rounded-2xl text-xl">
-                  🎯
-                </div>
-                <div>
-                  <h4 className="font-semibold text-slate-800">2+ Years Learning</h4>
-                  <p className="text-sm text-slate-500">Continuous learning journey</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
-                <div className="w-12 h-12 flex items-center justify-center bg-orange-100 text-orange-700 rounded-2xl text-xl">
-                  🤝
-                </div>
-                <div>
-                  <h4 className="font-semibold text-slate-800">IEEE Volunteer</h4>
-                  <p className="text-sm text-slate-500">Active tech community member</p>
-                </div>
-              </div>
-              
+              ))}
             </div>
           </div>
               
-          {/* RIGHT SIDE — INTERESTS */}
-          <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center justify-center">
-              Interests
-            </h3>
-              
+          {/* INTERESTS - Staggered Up */}
+          <div className="reveal reveal-up" style={{ transitionDelay: '200ms' }}>
+            <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center justify-center">Interests</h3>
             <div className="space-y-6">
-              
-              <a 
-                href="https://www.linkedin.com/posts/dulari-dayananda_leadershipjourney-ieeestudentbranch-innovation-activity-7278007032903880704-aIqY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3p4ucBwWjt1DRld8Hu5Puwqx35JbPhgd4" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
-              >
-                <div className="w-12 h-12 flex items-center justify-center bg-purple-100 text-purple-700 rounded-2xl text-xl">
-                  🤝
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold text-slate-800">Volunteering (IEEE)</h4>
-                  <p className="text-sm text-slate-500">Served as former Vice Secretary at IEEE Student Branch of SUSL</p>
-                </div>
-                <ExternalLink size={20} className="text-slate-400 hover:text-blue-600 transition-colors" />
-              </a>
-
-              <a 
-                href="https://www.linkedin.com/posts/dulari-dayananda_insl2025-innovationnationsrilanka-ieee-activity-7411653346681511936-2eIs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3p4ucBwWjt1DRld8Hu5Puwqx35JbPhgd4" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
-              >
-                <div className="w-12 h-12 flex items-center justify-center bg-green-100 text-green-700 rounded-2xl text-xl">
-                  🚀
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold text-slate-800">Hackathons</h4>
-                  <p className="text-sm text-slate-500">1st Runner-Up at INSL – Provincial Competition with Team Hackstrom.</p>
-                </div>
-                <ExternalLink size={20} className="text-slate-400 hover:text-blue-600 transition-colors" />
-              </a>
-
-              <a 
-                href="https://medium.com/@dulariwathsala824" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
-              >
-                <div className="w-12 h-12 flex items-center justify-center bg-orange-100 text-orange-700 rounded-2xl text-xl">
-                  📚
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold text-slate-800">Reading and Writing Tech Blogs</h4>
-                  <p className="text-sm text-slate-500">Exploring and sharing tech trends through blogs.</p>
-                </div>
-                <ExternalLink size={20} className="text-slate-400 hover:text-blue-600 transition-colors" />
-              </a>
-
-              <a 
-                href="https://www.linkedin.com/posts/dulari-dayananda_figma-uidesign-mobileappdesign-activity-7385689018589462528-iBs6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3p4ucBwWjt1DRld8Hu5Puwqx35JbPhgd4" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
-              >
-                <div className="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-700 rounded-2xl text-xl">
-                  🎨
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold text-slate-800">UI/UX Design</h4>
-                  <p className="text-sm text-slate-500">Learning to design intuitive and user-friendly interfaces.</p>
-                </div>
-                <ExternalLink size={20} className="text-slate-400 hover:text-blue-600 transition-colors" />
-              </a>              
+              {[
+                { href: "https://www.linkedin.com/posts/dulari-dayananda_leadershipjourney-ieeestudentbranch-innovation-activity-7278007032903880704-aIqY", icon: "🤝", title: "Volunteering (IEEE)", desc: "Former Vice Secretary at IEEE Student Branch of SUSL", bg: "bg-purple-100 text-purple-700" },
+                { href: "https://www.linkedin.com/posts/dulari-dayananda_insl2025-innovationnationsrilanka-ieee-activity-7411653346681511936-2eIs", icon: "🚀", title: "Hackathons", desc: "1st Runner-Up at INSL – Provincial Competition", bg: "bg-green-100 text-green-700" },
+                { href: "https://medium.com/@dulariwathsala824", icon: "📚", title: "Tech Blogging", desc: "Exploring and sharing tech trends through blogs", bg: "bg-orange-100 text-orange-700" },
+                { href: "https://www.linkedin.com/posts/dulari-dayananda_figma-uidesign-mobileappdesign-activity-7385689018589462528-iBs6", icon: "🎨", title: "UI/UX Design", desc: "Designing intuitive and user-friendly interfaces", bg: "bg-blue-100 text-blue-700" }
+              ].map((item, i) => (
+                <a key={i} href={item.href} target="_blank" rel="noopener noreferrer" className="reveal reveal-up flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all group" style={{ transitionDelay: `${i * 100}ms` }}>
+                  <div className={`w-12 h-12 flex items-center justify-center rounded-2xl text-xl ${item.bg}`}>{item.icon}</div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-slate-800">{item.title}</h4>
+                    <p className="text-sm text-slate-500">{item.desc}</p>
+                  </div>
+                  <ExternalLink size={20} className="text-slate-400 group-hover:text-blue-600 transition-colors" />
+                </a>
+              ))}
             </div>
           </div>
-              
+
         </div>
       </div>
-
     </section>
   );
 };

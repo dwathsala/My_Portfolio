@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Layout, Server, Database, BrainCircuit, CheckCircle} from 'lucide-react';
 
 const WhatIDo = () => {
-  // 1. Defining skill categories with descriptions and icons from lucide-react
+  // Intersection Observer to trigger the animation
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Find all revealable elements inside this section and activate them
+          const elements = entry.target.querySelectorAll('.reveal');
+          elements.forEach(el => el.classList.add('active'));
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const section = document.querySelector('#skills');
+    if (section) observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
   const services = [
     {
       icon: <BrainCircuit size={40} className="text-blue-600" />,
@@ -32,12 +49,11 @@ const WhatIDo = () => {
   ];
 
   return (
-    // 2. Section container using slate-900 background for a premium contrast look
-    <section id="skills" className="py-12 px-6 md:px-16 lg:px-30 bg-slate-900 text-white scroll-mt-16">
+    <section id="skills" className="py-12 px-6 md:px-16 lg:px-30 bg-slate-900 text-white scroll-mt-16 overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         
-        {/* 3. Section Title - Uses the bold style from your portfolio reference */}
-        <div className="text-center mb-10 md:mb-12">
+        {/* Section Title with Scale-in Animation */}
+        <div className="text-center mb-10 md:mb-12 reveal reveal-scale">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 text-white leading-tight">
             What <span className="text-blue-600">I Do</span>
           </h2>
@@ -47,25 +63,27 @@ const WhatIDo = () => {
           </p>
         </div>
 
-        {/* 4. The Grid Layout - Controls responsive behavior (1 col mobile, 3 tablet, 5 desktop) */}
+        {/* The Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-6">
           
-          {/* 5. Mapping over services to generate attractive cards */}
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="bg-slate-800/60 p-4 rounded-[2rem] border border-slate-700 shadow-xl hover:shadow-2xl hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-2 group"
+              // Added 'reveal' and 'reveal-up' for the scroll effect
+              className="reveal reveal-up bg-slate-800/60 p-4 rounded-[2rem] border border-slate-700 shadow-xl hover:shadow-2xl hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-2 group"
+              // Staggered delay: each card appears 150ms after the previous one
+              style={{ transitionDelay: `${index * 150}ms` }}
             >
-              {/* Icon Container with the distinctive corner element seen in references */}
+              {/* Icon Container */}
               <div className="relative mb-8 flex justify-center w-fit mx-auto">
                 <div className="p-5 bg-slate-700/50 rounded-2xl relative z-10 border border-slate-600 transition-colors group-hover:bg-blue-900/30 group-hover:border-blue-700">
                   {service.icon}
                 </div>
-                {/* 6. Decorative corner element */}
+                {/* Decorative corner element */}
                 <div className="absolute -top-3 -right-3 w-8 h-8 bg-blue-600/10 rounded-full blur-xl group-hover:bg-blue-600/30 transition-colors"></div>
               </div>
 
-              {/* Title & Description with improved hierarchy */}
+              {/* Title & Description */}
               <h3 className="text-2xl font-black mb-4 text-white text-center leading-tight">
                 {service.title}
               </h3>
