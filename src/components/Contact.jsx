@@ -124,7 +124,7 @@ const ContactAndFooter = () => {
             <div className="md:col-span-5 space-y-6">
               <h3 className="text-3xl font-bold text-slate-900 tracking-tighter">Dulari Dayananda</h3>
               <p className="text-slate-600 text-lg leading-relaxed max-w-sm font-medium">
-                Full-Stack Engineer passionate about designing and developing reliable, efficient software systems.
+                Software Engineer dedicated to building high-performance applications with a rigorous focus on quality assurance and system reliability.
               </p>
               <div className="flex gap-4">
                 <a href="https://linkedin.com/in/dulari-dayananda/" target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center bg-slate-100 text-slate-500 rounded-xl hover:text-blue-600 hover:bg-blue-50 transition-all border border-transparent hover:border-blue-100">
