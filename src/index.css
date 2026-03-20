@@ -3,3 +3,23 @@
 html {
   scroll-behavior: smooth;
 }
+
+
+/* 1. The Global "Hidden" State */
+.reveal {
+  opacity: 0;
+  /* Using a 'cubic-bezier' makes the movement feel natural and elastic */
+  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); 
+  will-change: transform, opacity;
+}
+
+/* 2. Specific Animation Directions */
+.reveal-up { transform: translateY(60px); }
+.reveal-left { transform: translateX(-50px); }
+.reveal-scale { transform: scale(0.9); }
+
+/* 3. The "Visible" State (Triggered by JS) */
+.reveal.active {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
