@@ -78,7 +78,7 @@ const ContactAndFooter = () => {
 
             {/* Right Column: Contact Form */}
             <div className="reveal reveal-right bg-slate-800/40 backdrop-blur-xl p-8 md:p-12 rounded-[3rem] border border-slate-700/50 shadow-2xl">
-              <form className="space-y-5" action="https://formspree.io/f/your-id" method="POST">
+              <form className="space-y-5" action="https://formspree.io/f/mnjgkypj" method="POST">
                 <div className="space-y-4">
                   <input 
                     name="name"
