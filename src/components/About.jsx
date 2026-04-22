@@ -25,13 +25,24 @@ const About = () => {
     { name: "Node.js", color: "bg-green-50 text-green-700 border-green-200" },
     { name: "Express.js", color: "bg-red-50 text-red-700 border-red-200" },
     { name: "Python", color: "bg-orange-50 text-orange-700 border-orange-200" },
+    { name: "TypeScript", color: "bg-blue-50 text-blue-700 border-blue-200" },
+    { name: "React Native", color: "bg-blue-50 text-blue-700 border-blue-200" },
+    { name: "C#", color: "bg-purple-50 text-purple-700 border-purple-200" },
+    { name: ".NET", color: "bg-yellow-50 text-yellow-700 border-yellow-200" },
     { name: "JAVA", color: "bg-gray-50 text-gray-700 border-gray-200" },
+    { name: "C Language", color: "bg-sky-50 text-sky-700 border-sky-200" },
     { name: "MongoDB", color: "bg-emerald-50 text-emerald-700 border-emerald-200" },
     { name: "SQL", color: "bg-purple-50 text-purple-700 border-purple-200" },
     { name: "Supabase", color: "bg-pink-50 text-pink-700 border-pink-200" },
+    { name: "PostgreSQL", color: "bg-red-50 text-red-700 border-red-200" },
+    { name: "MySQL Workbench", color: "bg-green-50 text-green-700 border-green-200" },
     { name: "Tailwind CSS", color: "bg-sky-50 text-sky-700 border-sky-200" },
+    { name: "Figma", color: "bg-orange-50 text-orange-700 border-orange-200" },
     { name: "Git & GitHub", color: "bg-slate-50 text-slate-700 border-slate-200" },
+    { name: "VS Code", color: "bg-purple-50 text-purple-700 border-purple-200" },
     { name: "Postman", color: "bg-yellow-50 text-yellow-700 border-yellow-200" },
+    { name: "JIRA", color: "bg-blue-50 text-blue-700 border-blue-200" },
+
   ];
 
   return (
@@ -55,12 +66,12 @@ const About = () => {
                 <span className="w-2 h-2 rounded-full bg-blue-800"></span>
                 My Journey
               </h3>
-              <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
+              <div className="w-full max-w-none space-y-5 text-slate-600 text-lg leading-relaxed text-justify">
                 <p>
-                  I am a dedicated <span className="text-slate-900 font-bold">Software Engineering Undergraduate</span> with a passion for creating impactful digital experiences. My approach blends technical logic with creative design to build applications that are as functional as they are beautiful.
+                  I am a dedicated <span className="text-slate-900 font-bold">Software Engineering Undergraduate</span> passionate about building impactful, user-centered digital solutions. I combine strong technical knowledge with thoughtful design to create applications that are efficient, scalable, and intuitive. I aim to deliver meaningful experiences through code while maintaining high standards of quality and performance.
                 </p>
                 <p>
-                  I thrive in collaborative environments and love tackling complex challenges. Whether it's optimizing backend logic or perfecting a responsive UI, I am committed to delivering high-quality code.
+                  I enjoy working in collaborative environments where I can share ideas, learn from others, and grow continuously. I am also self-motivated and always eager to explore new technologies and improve my skills. Whether optimizing backend systems or building responsive interfaces, I focus on writing clean, maintainable code and delivering meaningful solutions.
                 </p>
               </div>
 
@@ -107,11 +118,11 @@ const About = () => {
               <span className="w-2 h-2 rounded-full bg-blue-800"></span>
               Technical Stack
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {skills.map((skill, index) => (
                 <div 
                   key={index} 
-                  className={`reveal reveal-up p-5 rounded-2xl border ${skill.color} flex items-center justify-between transition-all hover:shadow-md group`}
+                  className={`reveal reveal-up p-3 rounded-2xl border ${skill.color} flex items-center justify-between transition-all hover:shadow-md group`}
                   style={{ transitionDelay: `${index * 50}ms` }}
                 >
                   <span className="font-bold">{skill.name}</span>
@@ -120,9 +131,9 @@ const About = () => {
               ))}
             </div>
             
-            <div className="reveal reveal-up mt-5 p-4 bg-blue-100 rounded-2xl border border-blue-200 flex items-center justify-center" style={{ transitionDelay: '600ms' }}>
+            <div className="reveal reveal-up mt-5 p-3 bg-blue-100 rounded-2xl border border-blue-200 flex items-center justify-center" style={{ transitionDelay: '600ms' }}>
               <p className="text-sm text-blue-800 font-medium">
-                Currently expanding my knowledge in Full-Stack Development and Python.
+                Currently expanding my knowledge in .NET and React Native.
               </p>
             </div> 
           </div>
@@ -137,12 +148,12 @@ const About = () => {
           {/* STATS - Staggered Up */}
           <div className="reveal reveal-up">
             <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center justify-center">Fun Stats</h3>
-            <div className="space-y-6">
+            <div className="space-y-3">
               {[
                 { emoji: "💻", val: "3+ Projects", sub: "Completed successfully", col: "bg-blue-100 text-blue-700" },
                 { emoji: "⭐", val: "10+ Repositories", sub: "Public GitHub projects", col: "bg-purple-100 text-purple-700" },
                 { emoji: "🎯", val: "2+ Years Learning", sub: "Continuous learning journey", col: "bg-green-100 text-green-700" },
-                { emoji: "🤝", val: "IEEE Volunteer", sub: "Active tech community member", col: "bg-orange-100 text-orange-700" }
+                { emoji: "🤝", val: "IEEE Volunteer", sub: "Former Vice Secretary at IEEE Student Branch of SUSL", col: "bg-orange-100 text-orange-700" }
               ].map((stat, i) => (
                 <div key={i} className="reveal reveal-up flex items-center gap-4 p-5 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all" style={{ transitionDelay: `${i * 100}ms` }}>
                   <div className={`w-12 h-12 flex items-center justify-center rounded-2xl text-xl ${stat.col}`}>{stat.emoji}</div>
@@ -158,9 +169,9 @@ const About = () => {
           {/* INTERESTS - Staggered Up */}
           <div className="reveal reveal-up" style={{ transitionDelay: '200ms' }}>
             <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center justify-center">Interests</h3>
-            <div className="space-y-6">
+            <div className="space-y-3">
               {[
-                { href: "https://www.linkedin.com/posts/dulari-dayananda_leadershipjourney-ieeestudentbranch-innovation-activity-7278007032903880704-aIqY", icon: "🤝", title: "Volunteering (IEEE)", desc: "Former Vice Secretary at IEEE Student Branch of SUSL", bg: "bg-purple-100 text-purple-700" },
+                { href: " ", icon: "📄", title: "Certifications", desc: "Showcasing my certified skills and continuous learning.", bg: "bg-pink-50 text-purple-700" },
                 { href: "https://www.linkedin.com/posts/dulari-dayananda_insl2025-innovationnationsrilanka-ieee-activity-7411653346681511936-2eIs", icon: "🚀", title: "Hackathons", desc: "1st Runner-Up at INSL – Provincial Competition", bg: "bg-green-100 text-green-700" },
                 { href: "https://medium.com/@dulariwathsala824", icon: "📚", title: "Tech Blogging", desc: "Exploring and sharing tech trends through blogs", bg: "bg-orange-100 text-orange-700" },
                 { href: "https://www.linkedin.com/posts/dulari-dayananda_figma-uidesign-mobileappdesign-activity-7385689018589462528-iBs6", icon: "🎨", title: "UI/UX Design", desc: "Designing intuitive and user-friendly interfaces", bg: "bg-blue-100 text-blue-700" }
