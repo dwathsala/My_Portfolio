@@ -25,22 +25,13 @@ const Projects = () => {
 
   const projectList = [
     {
-      category: "Group Project - Completed",
-      title: "EventBuddy – Smart Event Planning & Vendor Marketplace",
-      description: "EventBuddy is a MERN-based event management platform that allows users to create, manage, and book events, enhanced with an AI assistant for smarter user support.",
-      image: "EventBuddy.png", 
-      techStack: ["React.js with Tailwind CSS", "Node.js", "Express", "MongoDB"],
+      category: "Group Project - Ongoing",
+      title: "IAIS – Integrated Academic Information System",
+      description: "Developing a robust full-stack Academic Information System with role-based authentication using .NET Web API, MySQL, and React / React Native for web and mobile platforms.",
+      image: "IAIS.png", 
+      techStack: [".NET Web API", "MySQL", "React Native", "React.js"],
       liveLink: "#",
-      githubLink: "https://github.com/Hasmoonn/EventBuddy"
-    },
-    {
-      category: "Group Project - Completed",
-      title: "InternQuest – Internship & Job Matcher System",
-      description: "A sophisticated e-commerce solution focused on a seamless user experience and robust product management.",
-      image: "Web.jpeg", 
-      techStack: ["React.js", "Node.js", "Express", "MongoDB"],
-      liveLink: "#",
-      githubLink: "https://github.com/kaveenskn/InternQuest-web-Group2"
+      githubLink: "https://github.com/Integrated-Academic-Information-System"
     },
     {
       category: "Individual Project - Ongoing",
@@ -59,6 +50,24 @@ const Projects = () => {
       techStack: ["Python", "Sockets", "Tkinter", "Threading"],
       liveLink: "#",
       githubLink: "https://github.com/dwathsala/Client-Server-Architecture"
+    },
+    {
+      category: "Group Project - Completed",
+      title: "EventBuddy – Smart Event Planning & Vendor Marketplace",
+      description: "EventBuddy is a MERN-based event management platform that allows users to create, manage, and book events, enhanced with an AI assistant for smarter user support.",
+      image: "EventBuddy.png", 
+      techStack: ["React.js with Tailwind CSS", "Node.js", "Express", "MongoDB"],
+      liveLink: "#",
+      githubLink: "https://github.com/Hasmoonn/EventBuddy"
+    },
+    {
+      category: "Group Project - Completed",
+      title: "InternQuest – Internship & Job Matcher System",
+      description: "A sophisticated e-commerce solution focused on a seamless user experience and robust product management.",
+      image: "Web.jpeg", 
+      techStack: ["React.js", "Node.js", "Express", "MongoDB"],
+      liveLink: "#",
+      githubLink: "https://github.com/kaveenskn/InternQuest-web-Group2"
     },
     {
       category: "Individual Project - Completed",
