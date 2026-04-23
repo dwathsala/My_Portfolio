@@ -171,7 +171,7 @@ const About = () => {
             <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center justify-center">Interests</h3>
             <div className="space-y-3">
               {[
-                { href: " ", icon: "📄", title: "Certifications", desc: "Showcasing my certified skills and continuous learning.", bg: "bg-pink-50 text-purple-700" },
+                { href: "https://drive.google.com/drive/folders/1hAQQpyGJi5uEbc6_85RC89H2C-L7DCWp?usp=sharing", icon: "📄", title: "Certifications", desc: "Showcasing my certified skills and continuous learning.", bg: "bg-pink-50 text-purple-700" },
                 { href: "https://www.linkedin.com/posts/dulari-dayananda_insl2025-innovationnationsrilanka-ieee-activity-7411653346681511936-2eIs", icon: "🚀", title: "Hackathons", desc: "1st Runner-Up at INSL – Provincial Competition", bg: "bg-green-100 text-green-700" },
                 { href: "https://medium.com/@dulariwathsala824", icon: "📚", title: "Tech Blogging", desc: "Exploring and sharing tech trends through blogs", bg: "bg-orange-100 text-orange-700" },
                 { href: "https://www.linkedin.com/posts/dulari-dayananda_figma-uidesign-mobileappdesign-activity-7385689018589462528-iBs6", icon: "🎨", title: "UI/UX Design", desc: "Designing intuitive and user-friendly interfaces", bg: "bg-blue-100 text-blue-700" }
