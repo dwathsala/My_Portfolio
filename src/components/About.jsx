@@ -407,9 +407,9 @@ const About = () => {
         <div className="max-w-[1440px] mx-auto relative z-10">
           
           <div className="mb-16 text-center reveal-node">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
-              About Profile
-            </h2>
+          <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight text-slate-900">
+            About <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Profile</span>
+          </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
