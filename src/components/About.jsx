@@ -422,7 +422,7 @@ const About = () => {
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
                     Engineering Profile
                   </h3>
-                  <div className="space-y-4 text-slate-600 font-medium text-base text-justify leading-relaxed font-sans">
+                  <div className="space-y-4 text-slate-600 font-large text-base text-justify leading-relaxed font-sans">
                     <p>
                       I am a dedicated <span className="text-slate-900 font-bold">Software Engineering Undergraduate</span> at Sabaragamuwa University of Sri Lanka. I focus on full-stack web and mobile development alongside modern Quality Assurance practices to build stable, scalable, and intuitive software applications.
                     </p>
@@ -432,21 +432,21 @@ const About = () => {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+                <div className="mt-10 mb-4 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
                   <div className="flex gap-2">
                     <a href="https://github.com/dwathsala" target='_blank' rel='noopener noreferrer' className="p-2 bg-slate-50 border border-slate-200 rounded-xl hover:bg-slate-900 hover:border-slate-900 text-slate-600 hover:text-white transition-all duration-200 hover:-translate-y-0.5 shadow-sm">
-                      <Github size={16} />
+                      <Github size={20} />
                     </a>
                     <a href="https://www.linkedin.com/in/dulari-dayananda/" target='_blank' rel='noopener noreferrer' className="p-2 bg-slate-50 border border-slate-200 rounded-xl hover:bg-blue-600 hover:border-blue-600 text-slate-600 hover:text-white transition-all duration-200 hover:-translate-y-0.5 shadow-sm">
-                      <Linkedin size={16} />
+                      <Linkedin size={20} />
                     </a>
                     <a href="mailto:dulariwathsala824@mail.com" className="p-2 bg-slate-50 border border-slate-200 rounded-xl hover:bg-blue-600 hover:border-blue-600 text-slate-600 hover:text-white transition-all duration-200 hover:-translate-y-0.5 shadow-sm">
-                      <Mail size={16} />
+                      <Mail size={20} />
                     </a>
                   </div>
                   
                   <a href='#contact'>
-                    <button className="flex items-center gap-1.5 px-4 py-2 bg-slate-900 text-white rounded-xl text-xs font-bold hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-200">
+                    <button className="flex items-center gap-1.5 px-4 py-2 bg-slate-900 text-white rounded-xl text-md font-bold hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-200">
                       Initiate Context <ChevronRight size={14} />
                     </button>
                   </a>
@@ -472,7 +472,7 @@ const About = () => {
                       alt={`${tech.name} icon`} 
                       className="w-5 h-5 object-contain group-hover:scale-110 transition-transform duration-200" 
                     />
-                    <span className="text-xs font-bold text-slate-700 group-hover:text-slate-900 transition-colors">
+                    <span className="text-sm font-bold text-slate-700 group-hover:text-slate-900 transition-colors">
                       {tech.name}
                     </span>
                   </div>
