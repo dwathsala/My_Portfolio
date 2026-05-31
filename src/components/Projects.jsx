@@ -136,9 +136,9 @@ const Projects = () => {
     {
       category: "Group Project - Ongoing",
       title: "IAIS – Integrated Academic Information System",
-      description: "Developing a robust full-stack Academic Information System with role-based authentication using .NET Web API, MySQL, and React / React Native for web and mobile platforms.",
+      description: "Developing a robust full-stack Academic Information System with role-based authentication using PHP, MySQL, and React / React Native for web and mobile platforms.",
       image: "IAIS.png", 
-      techStack: [".NET Web API", "MySQL", "React Native", "React.js"],
+      techStack: ["PHP", "MySQL", "React Native", "React.js"],
       liveLink: "#",
       githubLink: "https://github.com/Integrated-Academic-Information-System"
     },
@@ -177,6 +177,24 @@ const Projects = () => {
       techStack: ["React.js", "Node.js", "Express", "MongoDB"],
       liveLink: "#",
       githubLink: "https://github.com/kaveenskn/InternQuest-web-Group2"
+    },
+    {
+      category: "Individual Project - Ongoing",
+      title: "Movix - Movie App",
+      description: "A modern movie discovery app built with React Native and Expo, allowing users to search movies, explore trending content, view detailed information, and save their favorite movies through a responsive and user-friendly interface.",
+      image: "Movix.png", 
+      techStack: ["React Native","Expo","Expo Router","Appwrite","TMDB API","NativeWind"],
+      liveLink: "",
+      githubLink: "https://github.com/dwathsala/Movix"
+    },
+    {
+      category: "Individual Project - Completed",
+      title: "ToDo App",
+      description: "A desktop task management application built with Python and Tkinter that enables users to add, view, and delete tasks through a simple graphical interface while maintaining persistent storage using text files.",
+      image: "ToDo.jpeg", 
+      techStack: ["Python", "Tkinter", "File Handling"],
+      liveLink: "",
+      githubLink: "https://github.com/dwathsala/ToDo_App"
     },
     {
       category: "Individual Project - Completed",
@@ -245,18 +263,18 @@ const Projects = () => {
                   {/* Right Side: Details - Slides from Right */}
                   <div className="lg:w-1/2 flex flex-col justify-between reveal reveal-right">
                     <div>
-                      <h4 className="text-sm font-bold uppercase tracking-wider text-slate-600 mb-3">Project Architecture</h4>
+                      <h4 className="text-lg font-bold uppercase tracking-wider text-slate-600 mb-3">Project Architecture</h4>
                       <p className="text-slate-500 text-[16px] leading-relaxed font-medium mb-6">
                         {project.description}
                       </p>
 
-                      <h4 className="text-sm font-bold uppercase tracking-wider text-slate-600 mb-3">Tech Infrastructure</h4>
-                      
+                      <h4 className="text-lg font-bold uppercase tracking-wider text-slate-600 mb-3">Tech Infrastructure</h4>
+
                       <div className="grid grid-cols-2 gap-3 mb-8">
                         {project.techStack.map((tech, i) => (
                           <div key={i} className="flex items-center gap-2.5 py-2.5 px-4 bg-slate-50/50 rounded-xl border border-slate-100 transition-colors duration-200 hover:bg-white hover:border-slate-200">
                             <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
-                            <span className="font-semibold text-slate-500 text-[15px]">{tech}</span>
+                            <span className="font-semibold text-slate-500 text-[16px]">{tech}</span>
                           </div>
                         ))}
                       </div>
@@ -268,7 +286,7 @@ const Projects = () => {
                         href={project.githubLink} 
                         target='_blank' 
                         rel='noopener noreferrer'
-                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 bg-white border border-slate-200 text-slate-700 font-semibold rounded-full hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95 text-sm text-center shadow-sm"
+                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 bg-white border border-slate-200 text-slate-700 font-semibold rounded-full hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95 text-[16px] text-center shadow-sm"
                       >
                         <img src="https://unpkg.com/simple-icons@v13/icons/github.svg" alt="GitHub" className="w-4 h-4 opacity-70" /> Source Code
                       </a>
@@ -277,7 +295,7 @@ const Projects = () => {
                         href={project.liveLink}
                         target='_blank' 
                         rel='noopener noreferrer'
-                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-900 text-white font-semibold rounded-full hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-900/10 transition-all active:scale-95 text-sm text-center"
+                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-900 text-white font-semibold rounded-full hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-900/10 transition-all active:scale-95 text-[16px] text-center"
                       >
                         <ExternalLink size={15} /> Deployment Link
                       </a>
