@@ -133,6 +133,10 @@ const ContactAndFooter = () => {
                 <a href="https://github.com/dwathsala" target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center bg-white text-slate-400 rounded-xl hover:text-slate-900 hover:bg-slate-100 transition-all border border-slate-200/80 shadow-sm">
                   <Github size={22} />
                 </a>
+
+                <a href="https://medium.com/@dulariwathsala824" target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center bg-white text-slate-400 rounded-xl hover:text-slate-900 hover:bg-slate-100 transition-all border border-slate-200/80 shadow-sm">
+                  <span className="font-bold text-lg">M</span>
+                </a>
               </div>
             </div>
 
