@@ -484,6 +484,10 @@ const About = () => {
 
           </div>
 
+          <div class="mt-15 reveal-node font-bold text-slate-600 text-2xl md:text-3xl tracking-tight">
+            Beyond Academics
+          </div>
+
           {/* MASTER-DETAIL SPLIT ARTIFACT FRAMEWORK */}
           <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch reveal-node">
             
