@@ -144,11 +144,18 @@ const ContactAndFooter = () => {
             <div className="md:col-span-3">
               <h4 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-8">Navigation</h4>
               <ul className="space-y-4">
-                {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((link) => (
-                  <li key={link}>
-                    <a href={`#${link.toLowerCase()}`} className="text-slate-600 hover:text-blue-700 transition-colors font-bold text-lg flex items-center gap-2 group">
+                {[
+                  { name: 'Home', href: '#home' },
+                  { name: 'About', href: '#about' },
+                  { name: 'Experience', href: '#experience' },
+                  { name: 'Skills', href: '#skills' },
+                  { name: 'Projects', href: '#projects' },
+                  { name: 'Contact', href: '#contact' }
+                ].map((link) => (
+                  <li key={link.name}>
+                    <a href={link.href} className="text-slate-600 hover:text-blue-700 transition-colors font-bold text-lg flex items-center gap-2 group">
                       <div className="w-1.5 h-1.5 rounded-full bg-blue-800 scale-0 group-hover:scale-100 transition-transform"></div>
-                      {link}
+                      {link.name}
                     </a>
                   </li>
                 ))}
