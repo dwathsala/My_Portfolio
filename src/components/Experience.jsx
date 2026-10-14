@@ -130,16 +130,16 @@ const Experience = () => {
   }, []);
 
   const points = [
-    'Tested modernized applications and validated functionality during migration work.',
-    'Used Playwright for automated testing and repeatable validation of critical flows.',
-    'Worked with Playwright MCP and AI agents to streamline QA workflows and testing efficiency.',
-    'Performed manual QA checks for edge cases, UI quality, and release readiness.'
+    'Validated modernized systems and checked functionality during migration work.',
+    'Used Playwright for automated testing and repeatable validation of critical workflows.',
+    'Worked with Playwright MCP and AI agents to improve QA efficiency and coverage.',
+    'Performed manual testing to catch edge cases and release-level issues.'
   ];
 
-  const tools = ['Playwright', 'Playwright MCP', 'AI Agents', 'Automation Testing', 'Manual Testing', 'QA Validation'];
+  const tools = ['Playwright', 'Playwright MCP', 'AI Agents', 'Automation Testing', 'Manual Testing'];
 
   return (
-    <section id="experience" className="py-24 px-6 md:px-16 lg:px-24 bg-slate-50 overflow-hidden relative border-t border-slate-200/60 scroll-mt-16">
+    <section id="experience" className="py-24 px-6 md:px-16 lg:px-24 bg-slate-50 overflow-hidden relative border-t border-slate-200/60 scroll-mt-8">
       <style>{`
         .reveal {
           opacity: 0;
@@ -154,71 +154,67 @@ const Experience = () => {
 
       <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none z-0 bg-gradient-to-br from-slate-50 via-slate-50 to-blue-50/20" />
 
-      <div className="max-w-[1400px] mx-auto relative z-10">
-        <div className="text-center mb-16 reveal">
-          
-          <h2 className="mt-6 text-4xl md:text-6xl font-black mb-4 tracking-tight text-slate-900">
-            <span className="bg-gradient-to-r from-blue-700 via-blue-600 to-sky-500 bg-clip-text text-transparent">Professional Journey</span>
+      <div className="max-w-[1200px] mx-auto relative z-10">
+        <div className="text-center mb-12 reveal">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900">
+            Professional <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Journey</span>
           </h2>
         </div>
 
-        <div className="reveal max-w-[1100px] mx-auto rounded-[2rem] border border-slate-200 bg-white/85 backdrop-blur-md shadow-[0_25px_70px_rgba(15,23,42,0.08)] overflow-hidden">
-          <div className="grid md:grid-cols-[240px_1fr]">
-            <div className="bg-slate-900 text-white p-7 md:p-8">
-              <div className="w-24 h-24 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-6 shadow-lg shadow-blue-900/20">
+        <div className="reveal max-w-[960px] mx-auto rounded-[1.75rem] border border-slate-200 bg-white/90 backdrop-blur-md shadow-[0_20px_60px_rgba(15,23,42,0.06)] overflow-hidden">
+          <div className="md:flex">
+            <div className="md:w-[230px] bg-slate-900 text-white p-6 md:p-7">
+              <div className="w-20 h-20 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-5 shadow-md shadow-blue-900/20">
                 <img src="/mitra.jpeg" alt="Mitra AI logo" className="w-full h-full object-cover" />
               </div>
 
-              <div className="mb-6">
-                <p className="text-[10px] uppercase tracking-[0.22em] text-blue-200/80 mb-2">Role</p>
-                <h3 className="text-2xl font-black tracking-tight">QA Engineer Intern</h3>
-              </div>
+              <p className="text-[10px] uppercase tracking-[0.22em] text-blue-200/80 mb-2">Role</p>
+              <h3 className="text-xl font-black tracking-tight">QA Engineer Intern</h3>
 
-              <div className="mb-6">
+              <div className="mt-5">
                 <p className="text-[10px] uppercase tracking-[0.22em] text-blue-200/80 mb-2">Company</p>
-                <p className="text-xl font-semibold text-white">Mitra AI</p>
+                <p className="text-lg font-semibold">Mitra AI</p>
               </div>
 
-              <div>
+              <div className="mt-5">
                 <p className="text-[10px] uppercase tracking-[0.22em] text-blue-200/80 mb-2">Timeline</p>
-                <p className="text-base font-medium text-slate-200">August 2026</p>
+                <p className="text-sm font-medium text-slate-200">August 2026 - Present</p>
               </div>
             </div>
 
-            <div className="p-7 md:p-8 lg:p-10">
-              <div className="mb-7">
-                <p className="text-[10px] uppercase tracking-[0.22em] text-blue-600 font-bold mb-3">Project</p>
+            <div className="flex-1 p-6 md:p-8">
+              <div className="mb-4">
+                <p className="text-[10px] uppercase tracking-[0.22em] text-blue-600 font-bold mb-2">Project</p>
                 <h4 className="text-2xl md:text-3xl font-black text-slate-900">NovoLingo AI Labs</h4>
               </div>
 
-              <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium mb-8">
+              <p className="text-slate-600 text-base leading-relaxed font-medium mb-6">
                 I worked on <span className="font-bold text-slate-900">NovoLingo AI Labs</span>,
                 a project focused on modernizing legacy systems and code into modern, scalable, and maintainable solutions.
-                My responsibilities included validating system behavior, improving release confidence, and supporting the migration
-                process through structured QA practices.
+                My responsibilities included validating functionality, supporting the migration process, and helping improve release confidence.
               </p>
 
-              <div className="border-t border-slate-200 pt-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <CheckCircle2 className="text-blue-700" size={18} />
-                  <h5 className="text-lg font-bold text-slate-900">Key responsibilities</h5>
+              <div className="border-t border-slate-200 pt-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <CheckCircle2 className="text-blue-700" size={17} />
+                  <h5 className="text-base font-bold text-slate-900">Responsibilities</h5>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {points.map((point) => (
                     <div key={point} className="flex gap-3 text-slate-700">
-                      <ArrowRight size={17} className="text-blue-700 mt-1 shrink-0" />
-                      <p className="font-medium leading-relaxed">{point}</p>
+                      <ArrowRight size={16} className="text-blue-700 mt-1 shrink-0" />
+                      <p className="font-medium leading-relaxed text-sm md:text-[15px]">{point}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="mt-7 border-t border-slate-200 pt-6">
-                <h5 className="text-lg font-bold text-slate-900 mb-4">Tools used</h5>
-                <div className="flex flex-wrap gap-2.5">
+              <div className="mt-5 border-t border-slate-200 pt-5">
+                <h5 className="text-base font-bold text-slate-900 mb-3">Tools used</h5>
+                <div className="flex flex-wrap gap-2">
                   {tools.map((tool) => (
-                    <span key={tool} className="px-3 py-2 rounded-full border border-blue-200 bg-blue-50 text-sm font-semibold text-slate-700">
+                    <span key={tool} className="px-3 py-1.5 rounded-full border border-blue-200 bg-blue-50 text-xs font-semibold text-slate-700">
                       {tool}
                     </span>
                   ))}
